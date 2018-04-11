@@ -1,0 +1,79 @@
+*{
+  box-sizing: border-box;
+}
+body{
+  margin: 0;
+  background-color: #779ECB;
+  font-family: sans-serif;
+}
+.blackground,.backimage{
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  z-index: -2;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+@keyframes fade {0% {opacity:1;}15% {opacity:1;}25%{opacity:0;}90% {opacity: 0}100% {opacity:1;}}
+.backimage:nth-of-type(1){
+  background-image: url("http://omargardens.com/blog/wp-content/uploads/2016/06/What-is-4x4-Gardening.jpg");
+  animation: fade 12s ease-in-out 9s infinite;
+}
+.backimage:nth-of-type(2){
+  background-image: url("http://www.lasallecollegevancouver.com/~/media/images/responsive/aiv/digital_media_arts/programme8_1920x1080.ashx");
+  animation: fade 12s ease-in-out 6s infinite;
+}
+.backimage:nth-of-type(3){
+  background-image: url("http://4.bp.blogspot.com/-Bb6kks9yas4/WFckKtG7b6I/AAAAAAAAMBk/NTksL7vtE1soMrbQcomwtxwkWu1EmXg-ACLcB/s1600/paint.jpg");
+  animation: fade 12s ease-in-out 3s infinite;
+}
+
+.backimage:nth-of-type(4){
+  background-image: url("https://www.rentokil.com/blog/wp-content/uploads/2016/03/how-to-prevent-bed-bugs-when-travelling-v2.jpg");
+  animation: fade 12s ease-in-out 0s infinite;
+}
+.blackground:nth-of-type(1){
+  background-color: black;
+  z-index: -1;
+  opacity: 0.7
+}
+.banner{
+  background-color: transparent;
+  width: 100%;
+  height: 14vh;
+  padding: 2vh 15vh;
+  display: grid;
+  grid-template-rows: 100%;
+  grid-template-columns: 50% 50%;
+}
+.logo{
+  width: 100%;
+  height: 100%;
+}
+.logo img{
+  height: 100%
+}
+.menu{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.menu a{
+  text-decoration: none;
+  color: white
+}
+header{
+  padding: 1vh 15vh;
+  color: white;
+}
+header .text{
+  position: absolute;
+  left: 30vh;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  height: fit-content;
+  width: 65vw;
+  font-size: 2em;
+  font-family: sans-serif;
+}
