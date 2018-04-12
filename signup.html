@@ -17,7 +17,7 @@
     <meta charset="utf-8">
     <link rel="shortcut icon" href="logo.png">
     <link rel="stylesheet" href="index.css">
-    <title>Hobbyist</title>
+    <title>Hobbyist | Login</title>
   </head>
   <body>
     <div class="whiteback">
@@ -42,20 +42,22 @@
         </div>
         <form class="signup" action="index.html" method="post">
           <label for="">Full Name:</label>
-          <input type="text" name="" value=""><br>
+          <input type="text" name="" value="" autocomplete="name" required><br>
           <label for="">Email:</label>
-          <input type="text" name="" value=""><br>
+          <input type="email" name="" value="" autocomplete="email" required><br>
           <label for="">Number:</label>
-          <input type="text" name="" value=""><br>
+          <input type="tel" name="" value="" autocomplete="tel" required><br>
           <label for="">Password:</label>
-          <input type="password" name="" value=""><br>
-          <button type="button" name="button">Register</button>
+          <input type="password" name="" value="" required><br>
+          <label for="[object Object]">Hobbies</label>
+          <textarea name="hobbies" placeholder="Enter your hobbies, separated by a comma"></textarea>
+          <button type="button" name="button" >Register</button>
         </form>
       <form class="login" action="index.html" method="post">
         <label for="[object Object]">Email:</label>
-        <input type="text" name="" value="">
+        <input type="email" name="" value="" autocomplete="email" required>
         <label for="[object Object]">Password:</label>
-        <input type="password" name="" value="">
+        <input type="password" name="" value="" required>
         <button type="button" name="button">Log In</button>
       </form>
     </div>
