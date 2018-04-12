@@ -40,11 +40,12 @@ body{
 .banner{
   background-color: transparent;
   width: 100%;
-  height: 14vmin;
-  padding: 2vmin 15vmin;
+  height: 14vh;
+  padding: 2vmin 5%;
   display: grid;
   grid-template-rows: 100%;
-  grid-template-columns: 50% 50%;
+  grid-template-columns: 50% 25%;
+  grid-column-gap: 25%
 }
 .logo{
   width: 100%;
@@ -55,31 +56,30 @@ body{
 }
 .menu{
   display: flex;
-  justify-content: space-around;
+  justify-content: flex-end;
   align-items: center;
   font-family:'Open Sans', sans-serif;
 }
 .menu a{
   text-decoration: none;
   color: white;
-  font-size: 0.9em
-}
-.menu a:nth-of-type(3),a:nth-of-type(4){
+  font-size: 0.9em;
   padding: 0.5em 1em;
   border: 1px solid transparent;
-  border-radius: 1em;
+  border-radius: 1.25em;
+  margin: 0 0 0 7.5%
 }
-.menu a:nth-of-type(3){
+.menu a:nth-of-type(1){
   background: rgba(255,255,255, 0.4)
 }
-.menu a:nth-of-type(3):hover{
+.menu a:nth-of-type(1):hover{
   background: rgba(255,255,255, 1);
   color: #779ECB
 }
-.menu a:nth-of-type(4){
+.menu a:nth-of-type(2){
   background: rgba(119,158,203, 0.85)
 }
-.menu a:nth-of-type(4):hover{
+.menu a:nth-of-type(2):hover{
   background: rgba(119,158,203, 1);
   box-shadow: 0px 0px 2px 0px white
 }
@@ -117,7 +117,7 @@ header button{
   color: white;
   height: 7.5vmin;
   width: 18.5vw;
-  padding: 1em;
+  padding: 1.5em 1vmin;
   position: absolute;
   margin: 0 1em;
   overflow: hidden;
@@ -140,21 +140,132 @@ header button:after{
 header button:hover:after{
   top:0;
 }
+/*Sign Up*/
+.banner{
+  padding: 2vmin 5%
+}
+.signin a{
+  background-color: inherit!important;
+  border: 1px solid white;
+}
+.signin a:nth-of-type(1):hover,.signin a:nth-of-type(2):hover{
+  background: inherit;
+  color: white;
+  border: 1px solid transparent;
+  box-shadow: none;
+}
+.whiteback{
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 14vh;
+  width: 50%;
+  background-color: white;
+  z-index: -1;
+}
+.register{
+  height: 86vh;
+  width: 100%;
+  display: flex;
+}
+.image{
+  height: 100%;
+  width: 50%;
+  background-image: url("https://cdn.dribbble.com/users/20883/screenshots/2166591/artsebasov-ipq2-icons.png");
+  background-size: contain;
+}
+.forms{
+  height: 100%;
+  width: 50%;
+  position: relative;
+  padding: 5%
+}
+.buttons{
+  height: 10%;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 100%
+}
+.signup-button, .login-button{
+  width: 100%;
+  padding: 2vmin;
+  border: 0px solid;
+  outline: none;
+  cursor: pointer;
+}
+.signup-button{
+  background-color: white;
+  color: #779ECB
+}
+.login-button{
+  background-color: grey;
+  color: white
+}
+.register form{
+  position: absolute;
+  margin: auto;
+  height: fit-content;
+  width: 80%;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0
+}
+.register form input{
+  width: 100%;
+  height: 7.5vmin;
+  margin: 0.5em 0;
+  color: #779ECB;
+  padding: 2em 1vmin 1em 1vmin;
+  font-family:'Open Sans', sans-serif;
+}
+.register form label{
+  font-size: 0.75em;
+  position: absolute;
+  margin: 1.25em 1vmin;
+  color: black;
+}
+.register form button{
+  height: 3em;
+  margin-top: 0.5em;
+  width: 5.5em;
+  border: 1px solid white;
+  background-color: transparent;
+  color: white;
+  padding: 0.75em;
+  cursor: pointer;
+  overflow: hidden;
+}
+.register form button:hover{
+  color: black;
+  background-color: white
+}
+.login{
+  display: none
+}
 @media screen and (max-width: 1024px){
   header .text{
-    left: 10vmin
+    left: 5%;
+    width: 80%;
+  }
+  header input{
+    width: 30%
+  }
+  .menu a{
+    font-size: 1em
   }
 }
-@media screen and (max-width: 820px){
-  .menu a:nth-of-type(3){
-    display: none
+@media screen and (max-width: 825px){
+  .banner{
+    grid-template-columns: 50% 50%;
+    grid-column-gap: 0%
   }
   .banner, header{
     padding: 2vmin 10vmin;
   }
   header .text{
     left: 10vmin;
-    width: 80%
+    width: 80%;
   }
   header input{
     width: 30%
@@ -162,15 +273,46 @@ header button:hover:after{
   header button{
     width: 30%
   }
+  .whiteback{
+    display: none
+  }
+  .image{
+    display: none;
+    opacity: 0.2;
+    width: 100%;
+    position: absolute;
+    background-size: cover;
+  }
+  .forms{
+    width: 100%;
+    height: 80%
+  }
+  .register form{
+    width: 90%
+  }
+}
+@media screen and (max-width: 825px) and (orientation: landscape){
+  header .text{
+    font-size: 1.5em;
+  }
+  .signup-button,.login-button{
+    display: none;
+  }
+  .forms{
+    height: 100%
+  }
 }
 @media screen and (max-width: 450px){
-  .menu a:nth-of-type(1), .menu a:nth-of-type(2){
+  .menu a:nth-of-type(1){
     display: none
   }
   header input{
     width: 80%;
     display: block;
     margin: 1em 0;
+  }
+  header .text{
+    font-size: 1.5em;
   }
   header button{
     position: relative;

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Hobbyist is an online community for people to keep track of their hobbies.">
+    <meta name="author" content="Jemima">
+    <meta property="og:title" content="Hobbyist: A community for people with hobbies">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Hobbyist">
+    <meta property="og:url" content="https://www.omoelle.com">
+    <meta property="og:image" content="logo.png">
+    <meta property="og:locale" content="en_US">
+    <meta name="theme-color" content="#779ECB">
+    <meta name="msapplication-navbutton-color" content="#779ECB">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta charset="utf-8">
+    <link rel="shortcut icon" href="logo.png">
+    <link rel="stylesheet" href="index.css">
+    <title>Hobbyist</title>
+  </head>
+  <body>
+    <div class="whiteback">
+
+    </div>
+    <div class="banner">
+      <div class="logo">
+          <a href="index.html"><img src="logo.png" alt="Hobbyist Logo"></a>
+      </div>
+      <div class="menu signin">
+        <a href="#" onclick="log()">Log In</a>
+        <a href="#" onclick="sign()">Sign Up</a>
+      </div>
+    </div>
+    <section class="register">
+      <div class="image">
+      </div>
+      <div class="forms">
+        <div class="buttons">
+          <button class="signup-button" onclick="sign()">Sign Up</button>
+          <button class="login-button" onclick="log()">Log In </button>
+        </div>
+        <form class="signup" action="index.html" method="post">
+          <label for="">Full Name:</label>
+          <input type="text" name="" value=""><br>
+          <label for="">Email:</label>
+          <input type="text" name="" value=""><br>
+          <label for="">Number:</label>
+          <input type="text" name="" value=""><br>
+          <label for="">Password:</label>
+          <input type="password" name="" value=""><br>
+          <button type="button" name="button">Register</button>
+        </form>
+      <form class="login" action="index.html" method="post">
+        <label for="[object Object]">Email:</label>
+        <input type="text" name="" value="">
+        <label for="[object Object]">Password:</label>
+        <input type="password" name="" value="">
+        <button type="button" name="button">Log In</button>
+      </form>
+    </div>
+    </section>
+  </body>
+</html>
+<script type="text/javascript">
+  var login = document.getElementsByClassName('login')
+  var signup = document.getElementsByClassName('signup');
+  var logbutton = document.getElementsByClassName('login-button');
+  var signbutton = document.getElementsByClassName('signup-button')
+  function sign() {
+    signup[0].style.display = "block";
+    login[0].style.display = "none";
+    signbutton[0].style.backgroundColor = "white";
+    signbutton[0].style.color = "#779ECB";
+    logbutton[0].style.backgroundColor = "grey";
+    logbutton[0].style.color = "white";
+  }
+  function log() {
+    login[0].style.display = "block";
+    signup[0].style.display = "none"
+    logbutton[0].style.backgroundColor = "white";
+    logbutton[0].style.color = "#779ECB";
+    signbutton[0].style.backgroundColor = "grey";
+    signbutton[0].style.color = "white";
+  }
+</script>
